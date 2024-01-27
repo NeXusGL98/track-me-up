@@ -7,6 +7,10 @@ export class Project {
 
     }
 
+    static fromJira(project: any) {
+        return new Project(project.id, project.key, project.name)
+    }
+
     toString() {
         return `${this.name} (${this.key})`
     }

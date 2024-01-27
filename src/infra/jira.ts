@@ -9,7 +9,9 @@ export interface JiraGateway {
     getProjects(): Promise<Project[]>
     getSelfUser(): Promise<User>
     getAllSelfIssues(): Promise<Issue[]>
+    getTodoIssues(): Promise<Issue[]>
     createIssues(issue: Partial<Issue>[]): Promise<number>
-    addWorklog(issueId: string, worklog: Worklog): Promise<void>
+    addWorklog(issueId: string, worklog: Worklog): Promise<Worklog>
+    getIssueWorklogs(issueId: string): Promise<Worklog[]>
 
 }

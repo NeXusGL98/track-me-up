@@ -8,9 +8,9 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "tsc:watch": "tsc -w",
-    "start:dev": "npx tsx --env-file=.env ./src/index.ts"
+    "start:dev": "npx tsx --env-file=.env ./src/index.ts",
+    "test": "node --import tsx --test __tests__/**/*.test.ts"
   },
   "keywords": [],
   "author": "",
